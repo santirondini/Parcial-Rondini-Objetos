@@ -32,6 +32,7 @@ describe "Test Parcial Objetos" {
     
     const paquete = guido.paqueteSegunEstrategia(santino)
     assert.that(paquete.valorBasico() == 100)
+
     
     }
 
