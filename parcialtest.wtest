@@ -1,0 +1,39 @@
+import parcial.*
+
+describe "Test Parcial Objetos" {
+    
+    const santino = new Alma(dinero = 50000, accionesBuenas = 100)
+    const guido = new Agente(deuda = 50, estrategia = navegante, paquetesVendidos = 2)
+    const felipe = new Agente(deuda = 5, estrategia = navegante, paquetesVendidos = 20)
+    const eitan = new Agente(deuda = 58, estrategia = navegante, paquetesVendidos = 24)
+    
+    const paquete1 = new PaqueteTren(valorBasico = 7)
+    const paquete2 = new PaqueteBote(valorBasico = 17)
+    const paquete3 = new PaquetePaloConBrujula(valorBasico = 10)
+    test "Prueba" {
+        assert.equals(santino.cantidadDeAccionesBuenas(),3)
+    }
+
+    test "Otro" {
+        departamentoDeLaMuerte.agregarAgente(guido)
+        departamentoDeLaMuerte.agregarAgente(eitan)
+        departamentoDeLaMuerte.agregarAgente(felipe)
+        assert.equals(departamentoDeLaMuerte.mejorAgente(), eitan)
+    }
+
+    test "Santino" {
+        assert.that(3 == santino.cantidadDeAccionesBuenas())
+    }
+
+    test "Paquetes" {
+    departamentoDeLaMuerte.agregarPaquete(paquete1)
+    departamentoDeLaMuerte.agregarPaquete(paquete2)
+    departamentoDeLaMuerte.agregarPaquete(paquete3)
+    
+    const paquete = guido.paqueteSegunEstrategia(santino)
+    assert.that(paquete.valorBasico() == 100)
+    
+    }
+
+
+}
